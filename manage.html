@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2980b9;
+            margin-bottom: 30px;
+            font-size: 2.5em; /* Adjust font size for consistency */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+            gap: 20px; /* Space between buttons */
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%; /* Full width for buttons */
+            max-width: 300px; /* Limit button width */
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-primary {
+            background-color: #2980b9; /* Primary color */
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c; /* Danger color */
+            color: white;
+        }
+
+        .btn-info {
+            background-color: #3498db; /* Info color */
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #8e44ad; /* Secondary color */
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: #f39c12; /* Warning color */
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column; /* Stack buttons on smaller screens */
+            }
+        }
+    </style>
+    <title>Manage Village</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome on Gramsevak Dashboard</h1>
+        <br>
+        <div class="button-container">
+            <a href="{{ url_for('add_birth_page') }}" class="btn btn-primary">Add Birth Record</a>
+            <a href="{{ url_for('remove_birth_page') }}" class="btn btn-danger">Remove Birth Record</a>
+            <a href="{{ url_for('view_population_data') }}" class="btn btn-info">View Population Data</a>
+            <a href="{{ url_for('update_role_page') }}" class="btn btn-secondary">Update Roles</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-warning">Logout</a>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
